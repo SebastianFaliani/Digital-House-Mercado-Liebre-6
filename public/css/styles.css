@@ -139,6 +139,7 @@ main section article img {
       width: 100%;
       height: 300px;
 }
+
 main section article div.container-detalle {
       border-top: 1px solid var(--gris-claro);
       padding: 15px;
@@ -150,7 +151,9 @@ main section article div div.container-precio {
       width: 100%;
       margin-bottom: 15px;
 }
-
+main section article:hover > div.container-detalle > h5 {
+      display: block;
+}
 main section article p.main--precio {
       font-size: var(--precio);
       width: 30%;
@@ -164,11 +167,12 @@ main section article p.main--descuento {
 main section article h5 {
       font-size: var(--descripcion);
       color: var(--gris-oscuro);
-      opacity: 0;
+      display: none;
+      /*  opacity: 0; */
 }
-main section article h5:hover {
+/* main section article h5:hover {
       opacity: 1;
-}
+} */
 
 main section article div div.main--envio {
       display: block;
