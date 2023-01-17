@@ -126,11 +126,14 @@ main section h4 {
 section div.productsContainer {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: space-evenly;
 }
 main section article {
       background-color: white;
       margin-bottom: 10px;
+}
+main section article:hover {
+      box-shadow: 5px 5px 10px rgb(100, 100, 100);
 }
 main section article img {
       width: 100%;
@@ -161,6 +164,10 @@ main section article p.main--descuento {
 main section article h5 {
       font-size: var(--descripcion);
       color: var(--gris-oscuro);
+      opacity: 0;
+}
+main section article h5:hover {
+      opacity: 1;
 }
 
 main section article div div.main--envio {
@@ -177,26 +184,36 @@ main section article div div.main--envio {
       top: -15px;
       color: var(--verde);
 }
+main section article div div.main--envio i:hover {
+      transform: rotateZ(-90deg);
+      transition: all 1s ease;
+}
 
 /* FOOTER */
 footer {
       padding: 50px 10px 10px;
       background-color: white;
 }
-footer article {
+footer section article {
       text-align: center;
       margin-bottom: 50px;
 }
-footer article i {
+footer section article i {
       font-size: 2em;
       color: var(--celeste);
       margin-bottom: 10px;
+}
+footer section article i:hover {
+      color: rgb(45, 47, 48);
 }
 footer span {
       font-size: var(--parrafos);
 }
 
 @media (min-width: 768px) {
+      footer section {
+            display: flex;
+      }
       header div.container-logo div.logo {
             max-width: 250px;
       }
@@ -222,6 +239,9 @@ footer span {
       }
       header nav ul li {
             margin: 5px;
+      }
+      section div.productsContainer {
+            justify-content: space-between;
       }
       main section article {
             box-shadow: 0px 0px 10px rgb(100, 100, 100);
